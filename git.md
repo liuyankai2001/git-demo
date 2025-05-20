@@ -59,6 +59,7 @@ git pull origin A:B#拉取更新代码，将远程端【别名】的【A分支�
 
 git pull 别名 分支 #等价于
 git fetch 别名 分支
+git log master..origin/master --oneline 查看本地代码和远程代码差异
 git merge 别名/分支
 
 git clone 地址 #第一次从github中下载代码，公共代码库克隆不需要登陆
