@@ -3,6 +3,7 @@
 ```bash
 git config --global user.name 用户名 #设置全局签名
 git config --global user.email 邮箱 #设置全局签名
+git remote -v # 查看远程仓库信息
 # 存储位置：C:\Users\28329\.gitconfig
 
 git init #git初始化
@@ -12,6 +13,9 @@ git add . #添加所有未添加的文件到暂存区
 git rm --cached 文件名 #删除暂存区追踪的文件
 
 git commit -m "日志信息" 文件名
+
+git push -u 分支名 推送当前分支并设置上游分支（第一次推送新分支，后面即可使用git push）
+git pull 
 
 git reflog #查看历史版本信息
 git log #查看详细日志
@@ -31,6 +35,8 @@ git reset HEAD 文件名 #暂存区文件->工作区 （绿变红）
 ```bash
 git branch #查看当前所处分支
 git branch -v #查看分支
+git branch -vv #查看上游分支
+git branch -r #查看远程仓库分支
 git branch 分支名 #创建分支
 git branch -d 分支名 #删除分支
 git checkout 分支名 #切换分支
