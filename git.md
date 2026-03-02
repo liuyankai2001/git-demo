@@ -4,13 +4,17 @@
 git config --global user.name 用户名 #设置全局签名
 git config --global user.email 邮箱 #设置全局签名
 git remote -v # 查看远程仓库信息
-# 存储位置：C:\Users\28329\.gitconfig
+# 存储位置：
+# Windos ：C:\Users\28329\.gitconfig
+# Linux：~/.gitconfig
 
 git init #git初始化
 git status #查看git状态
 git add 文件名 #添加暂存区
 git add . #添加所有未添加的文件到暂存区
-git rm --cached 文件名 #删除暂存区追踪的文件
+git reset <file> # 将移除add后的文件。
+git restore --staged <file> # 将移除add后的文件。
+git rm --cached 文件名 #删除已commit的文件，但不在本地删除
 
 git commit -m "日志信息" 文件名
 
@@ -19,12 +23,9 @@ git pull
 
 git reflog #查看历史版本信息
 git log #查看详细日志
-git log --graph #以图的形式显示出提交日志
-git log --graph --pretty=format:"%h %s" #以格式化图的形式显示出提交日志
 
 git reset --hard 版本号 #版本穿梭
 #当前版本信息存储位置：C:\Users\28329\Desktop\git-demo\.git\refs\heads\master
-
 
 git checkout -- 文件名 #撤销修改的文件 
 git reset HEAD 文件名 #暂存区文件->工作区 （绿变红）
